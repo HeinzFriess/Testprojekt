@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FirstJS</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body onload="slideshow()">
+    <h1>Der TextänderButton</h1>
+
+    <p id="text">das möchte ich ändern</p>
+
+    <button onmouseover="neuerText()">DrückMichButton</button>
+    <button onmouseover="neuerText2()">DrückAuchMichButton</button>
+    <button onclick="addIngredient('400ml', 'Milch')">Milch hinzufügen</button>
+    <button onclick="addIngredient('500g', 'Mehl')">Mehl hinzufügen</button>
+    <p>alles Laden mit geschalchtelter Funktion</p><br>
+    <input type="text" name="Menge" id="fieldMenge" placeholder="Menge">
+    <input type="text" name="Name" id="fieldNAme" placeholder="Name">
+    <input type="number" type="text" name="Menge" id="Wert1" placeholder="Zahl1">
+    <input type="number" type="text" name="Name" id="Wert2" placeholder="Zahl2">
+    <p id="ausgabe"></p>
+
+    <button class="button" onclick="allesLaden()">Zutaten füllen</button><br>
+    <button class="button" onclick="add()">Rechnen</button><br>
+
+    <div>
+        <table class='dieTabelle' id="table">
+            <tr>
+                <td>Menge</td>
+                <td>Name</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Eier</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="picdiv">
+        <img src="img/facebook-3-48.png" id="pic" alt="no pic">
+    </div>
+
+    <button class="button" onclick="changepic()">Ändere das Bild</button>
+    <!-- <button class="button" onclick="slideshow()">Bildwechsel</button> -->
+    <h2>Array und For schleife</h2><br>
+    <button class="button" onclick="showtodos()">Liste Anzeigen</button>
+    <input type="text" placeholder="Neuer Wert" id="fillvalue">
+    <button class="button" onclick="filltodos()">Liste Füllen</button>
+    <button class="button" onclick="deltodos()">Eintrag Löschen</button>
+    <div class="arrayForschleife" id="arrayDiv">
+
+    </div>
+</body>
+
+</html>

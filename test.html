@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testen</title>
+
+    <script>
+        let menus = ["Pizza", "Lamacun", "Falffel", "Linsecurry"];
+        let prices = [7, 8, 6, 9];
+        let amounts = [1, 3, 2, 5];
+
+        function getValueFromInput(id) {
+            let wert = document.getElementById(`${id}`).value;
+            return wert;
+        }
+
+        function getMenuFromInput() {
+            let result = getValueFromInput('menu');
+            return result.replace(/^\s+|\s+$/gm, '');
+        }
+
+        function getPriceFromInput() {
+            let result = +getValueFromInput('price');
+            return result;
+        }
+
+        function onAddMenu() {
+            let menu = getMenuFromInput();
+            let price = getPriceFromInput();
+            let newItem = menus.includes(menu);
+            if (!newItem) {
+                menus.push(menu);
+                prices.push(price);
+                amounts.push(1);
+            }
+            else {
+                let Index = getMenuIndex(menu);
+                let oldValue = amounts[index];
+                amounts.splice(index, 1, (oldValue + 1));
+            }
+
+        }
+
+        function getMenuIndex(menu) {
+            return menus.indexOf(menu);
+        }
+
+        function zeigText() {
+            const menu = getMenuFromInput();
+            const price = getPriceFromInput();
+            const amount = amounts[1];
+            document.getElementById('anzeige').innerHTML +=
+                ` Menü: ${menu} <br>
+            Preis: ${price} <br>
+            Menge: ${amount} `
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <input type="text" id="menu" placeholder="menu">
+    <input type="text" id="price" placeholder="price">
+    <p id="anzeige"></p>
+
+    <button onclick="zeigText()">zeig</button>
+    <button onclick="onAddMenu()">zeig</button>
+
+</body>
+
+</html>

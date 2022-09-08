@@ -1,0 +1,17 @@
+.dieTabelle {
+    width: 50vw;
+    background-color: lightcoral;
+    margin-top: 32px;
+}
+
+.button {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.picdiv {
+    display: flex;
+    justify-content: center;
+    background-color: blue;
+    padding: 16px;
+}
